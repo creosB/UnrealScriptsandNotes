@@ -7,11 +7,8 @@
 </ul>
 <hr>
 <h1 class="code-line" data-line-start=9 data-line-end=10 ><a id="Resimli_Konu_Anlatm_9"></a>Resimli Konu Anlatımı</h1>
-<p class="has-line-data" data-line-start="10" data-line-end="12"><img src="https://raw.githubusercontent.com/creosB/Flying-Bird/main/resim1.png" alt=""><br>
-<img src="https://raw.githubusercontent.com/creosB/Flying-Bird/main/resim2.png" alt=""></p>
-<hr>
-<h1 class="code-line" data-line-start=13 data-line-end=14 ><a id="Bilmeniz_gerekenler_13"></a>Bilmeniz gerekenler</h1>
 <h2 class="code-line" data-line-start=14 data-line-end=16 ><a id="An_old_rock_in_the_deserthttpsrawgithubusercontentcomcreosBCPPdersveorneklerimainresim1png_C_Konu_anlatmhttpsgithubcomcreosBCPPdersveornekleriblobmaincppanlatC4B1mpdf_14"></a><a href="https://github.com/creosB/CPP-ders-ve-ornekleri/blob/main/cppanlat%C4%B1m.pdf"><img src="https://raw.githubusercontent.com/creosB/CPP-ders-ve-ornekleri/main/resim1.png" alt="An old rock in the desert" title="C++ Konu anlatımı"></a></h2>
+<h1 class="code-line" data-line-start=13 data-line-end=14 ><a id="Bilmeniz_gerekenler_13"></a>Bilmeniz gerekenler</h1>
 <p class="has-line-data" data-line-start="14" data-line-end="16">Unreal Engine 4 için giriş niteliğinde basit kodlar içermektedir.<br>
 İleride örnekler eklenebilir.</p>
 </blockquote>
