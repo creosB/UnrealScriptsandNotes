@@ -1,6 +1,6 @@
 <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Unreal_Engine_Notlar_0"></a>Unreal Engine Notlar</h1>
 <h2 class="code-line" data-line-start=2 data-line-end=4 ><a id="NSolidhttpsplaylhgoogleusercontentcom4ChxU_bzuJe8ix7IC7fYOq5xH3rtDjDMFogy4NsF6l8jNH9Q_G7zQUWoZtWvkliyww2247h1264rwhttpwwwartistscompanydigital_2"></a><a href="http://www.artistscompany.digital/"><img src="https://play-lh.googleusercontent.com/4ChxU_bzuJe8ix7IC7fYOq5xH3rtDjDMFogy4NsF6l8jNH9Q_G7z-QUWoZtWvkliyw=w2247-h1264-rw" alt="N|Solid"></a></h2>
-<h2 class="code-line" data-line-start=4 data-line-end=6 ><a id="Unreal_Engine_4_iin_yazdm_basit_c_scriptlerini_ierir_4"></a>Unreal Engine 4 için yazdığım basit c++ script’lerini içerir.</h2>
+<h2 class="code-line" data-line-start=4 data-line-end=6 ><a id="Unreal_Engine_4_iin_yazdm_basit_c_scriptlerini_ierir_4"></a>Unreal Engine 4 için yazdığım basit c++ kodları içerir.</h2>
 <h1 class="code-line" data-line-start=6 data-line-end=7 ><a id="zelikleri_6"></a>Özelikleri</h1>
 <ul>
 <li class="has-line-data" data-line-start="7" data-line-end="8">Alt taraftan görsel olarak inceleyebilirsiniz.</li>
