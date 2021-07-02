@@ -4,7 +4,24 @@
 It contains simple c++ code I wrote for Unreal Engine 4.</h2>
 <h1 class="code-line" data-line-start=6 data-line-end=7 ><a id="zelikleri_6"></a>Özelikleri / Properties</h1>
 <ul>
-<li class="has-line-data" data-line-start="7" data-line-end="8">Alt taraftan görsel olarak inceleyebilirsiniz. / You can visually inspect below</li>
+<li class="has-line-data" data-line-start="7" data-line-end="8">Alt taraftan görsel olarak inceleyebilirsiniz.<br>
+You can visually inspect below</li>
+<li class="has-line-data" data-line-start="7" data-line-end="8">3D Karakter kontrolü.<br>
+3D Character Control</li>
+<li class="has-line-data" data-line-start="7" data-line-end="8">Eşyayı tutma, sürükleme.<br>
+Grav</li>
+<li class="has-line-data" data-line-start="7" data-line-end="8">Detaylı hareketli platform<br>
+Moveable platform</li>
+<li class="has-line-data" data-line-start="7" data-line-end="8">Basit ve gelişmiş nesne yaratıcı.<br>
+Simple and advanced spawner</li>
+<li class="has-line-data" data-line-start="7" data-line-end="8">Tank topu gibi silahlar için atış sistemi.<br>
+Projectile for weapons such as tank guns</li>
+<li class="has-line-data" data-line-start="7" data-line-end="8">Niagara efektli engel örneği.<br>
+Obstacle with niagara effect</li>
+<li class="has-line-data" data-line-start="7" data-line-end="8">Fps oyunlarında olduğu gibi silah.<br>
+FPS Gun</li>
+<li class="has-line-data" data-line-start="7" data-line-end="8">Sağlık kutusu, silah kutusu örneği.<br>
+Health box, weapon box example.</li>
 </ul>
 <hr>
 <h1 class="code-line" data-line-start=9 data-line-end=10 ><a id="Resimli_Konu_Anlatm_9"></a>Unreal Engine 4 Scripts</h1>
