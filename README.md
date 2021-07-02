@@ -9,7 +9,7 @@ You can visually inspect below</li>
 <li class="has-line-data" data-line-start="7" data-line-end="8">3D Karakter kontrolü.<br>
 3D Character Control</li>
 <li class="has-line-data" data-line-start="7" data-line-end="8">Eşyayı tutma, sürükleme.<br>
-Grav</li>
+Grab</li>
 <li class="has-line-data" data-line-start="7" data-line-end="8">Detaylı hareketli platform<br>
 Moveable platform</li>
 <li class="has-line-data" data-line-start="7" data-line-end="8">Basit ve gelişmiş nesne yaratıcı.<br>
