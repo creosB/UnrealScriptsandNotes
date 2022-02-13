@@ -37,6 +37,8 @@ BP save and load system</li>
 Loading screen and load map methods.</li>
 <li class="has-line-data" data-line-start="7" data-line-end="8">Garbage Collection on Unreal Engine</li>
 <li class="has-line-data" data-line-start="7" data-line-end="8">Multiplayer server replication, lag and packet loss explanation and fix.</li>
+<li class="has-line-data" data-line-start="7" data-line-end="8">Unreal Engine Optimizing (GPU, LOD, DataSmith,UV, etc.)</li>
+<li class="has-line-data" data-line-start="7" data-line-end="8">Unreal Engine Environment (light, effects, materials, etc.)</li>
 </ul>
 <hr>
 <h1 class="code-line" data-line-start=9 data-line-end=10 ><a id="Resimli_Konu_Anlatm_9"></a>Unreal Engine 4 Scripts and Notes</h1>
