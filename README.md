@@ -42,7 +42,7 @@ Loading screen and load map methods.</li>
 </ul>
 <hr>
 <h1 class="code-line" data-line-start=9 data-line-end=10 ><a id="Resimli_Konu_Anlatm_9"></a>Unreal Engine 4 Scripts and Notes</h1>
-<h2 class="code-line" data-line-start=14 data-line-end=16 ><a id="An_old_rock_in_the_deserthttpsrawgithubusercontentcomcreosBCPPdersveorneklerimainresim1png_C_Konu_anlatmhttpsgithubcomcreosBCPPdersveornekleriblobmaincppanlatC4B1mpdf_14"></a><a href="https://github.com/creosB/UnrealScripts/blob/main/UE4%20Not.pdf"><img src="https://raw.githubusercontent.com/creosB/UnrealScripts/main/Outline_Table%20of%20Contents.png" alt="An old rock in the desert" title="Unreal Engine"></a></h2>
+<h2 class="code-line" data-line-start=14 data-line-end=16 ><a id="An_old_rock_in_the_deserthttpsrawgithubusercontentcomcreosBCPPdersveorneklerimainresim1png_C_Konu_anlatmhttpsgithubcomcreosBCPPdersveornekleriblobmaincppanlatC4B1mpdf_14"></a><a href="https://github.com/creosB/UnrealScriptsandNotes/blob/main/Unreal%20Engine%20Scripts%20and%20Notes.md"><img src="https://raw.githubusercontent.com/creosB/UnrealScripts/main/Outline_Table%20of%20Contents.png" alt="An old rock in the desert" title="Unreal Engine"></a></h2>
 <h1 class="code-line" data-line-start=13 data-line-end=14 ><a id="Bilmeniz_gerekenler_13"></a>Bilmeniz gerekenler / What you need to know</h1>
 <p class="has-line-data" data-line-start="14" data-line-end="16">Unreal Engine 4 için giriş niteliğinde kodlar ve ileri seviye için notlar içermektedir.<br>
 İleride örnekler eklenebilir.<br>
