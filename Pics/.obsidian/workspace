@@ -1,0 +1,87 @@
+{
+  "main": {
+    "id": "f096ac105f316217",
+    "type": "split",
+    "children": [
+      {
+        "id": "36e85c9d7c3c3eb3",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8b253d59ad71f79f",
+    "type": "split",
+    "children": [
+      {
+        "id": "58cb2acaf1409bf9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a09c82d74631aab1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "a7b6a626751eab95",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "unreal",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a06cbefdcb3f52f9",
+    "type": "split",
+    "children": [
+      {
+        "id": "d08b048953fda2e6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dd14e7aa53783956",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "36e85c9d7c3c3eb3",
+  "lastOpenFiles": []
+}

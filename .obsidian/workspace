@@ -1,0 +1,94 @@
+{
+  "main": {
+    "id": "0643b45ce898cd6e",
+    "type": "split",
+    "children": [
+      {
+        "id": "067e202fbe689735",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Unreal Engine Scripts and Notes.md",
+            "mode": "preview",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "29f52339b9325b8c",
+    "type": "split",
+    "children": [
+      {
+        "id": "f87643b5486f59ca",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8b4bbe9027201a48",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "64902def8ab032e4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c14f06b91ccc5f13",
+    "type": "split",
+    "children": [
+      {
+        "id": "46873f0fe0a8d7ba",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "289cf61e4edbca18",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Unreal Engine Scripts and Notes.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "067e202fbe689735",
+  "lastOpenFiles": [
+    "Unreal Engine Scripts and Notes.md"
+  ]
+}
