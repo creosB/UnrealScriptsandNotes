@@ -7,38 +7,11 @@ It contains simple c++ code and note I wrote for Unreal Engine 4.</h2>
 <ul>
 <li class="has-line-data" data-line-start="7" data-line-end="8">Alt taraftan görsel olarak inceleyebilirsiniz.<br>
 You can visually inspect below</li>
-<li class="has-line-data" data-line-start="7" data-line-end="8">3D Karakter kontrolü.<br>
-3D Character Control</li>
-<li class="has-line-data" data-line-start="7" data-line-end="8">Eşyayı tutma, sürükleme.<br>
-Grab and drag</li>
-<li class="has-line-data" data-line-start="7" data-line-end="8">Detaylı hareketli platform<br>
-Moveable platform</li>
-<li class="has-line-data" data-line-start="7" data-line-end="8">Basit ve gelişmiş nesne yaratıcı.<br>
-Simple and advanced spawner</li>
-<li class="has-line-data" data-line-start="7" data-line-end="8">Tank topu gibi silahlar için atış sistemi.<br>
-Projectile for weapons such as tank guns</li>
-<li class="has-line-data" data-line-start="7" data-line-end="8">Niagara efektli engel örneği.<br>
-Obstacle with niagara effect</li>
-<li class="has-line-data" data-line-start="7" data-line-end="8">Fps oyunlarında olduğu gibi silah.<br>
-FPS Gun</li>
-<li class="has-line-data" data-line-start="7" data-line-end="8">Sağlık kutusu, silah kutusu örneği.<br>
-Health box, weapon box example.</li>
-<li class="has-line-data" data-line-start="7" data-line-end="8">Multiplayer lobby</li>
-<li class="has-line-data" data-line-start="7" data-line-end="8">Multiplayer puzzle mechanic</li>
-<li class="has-line-data" data-line-start="7" data-line-end="8">Blueprint toplanabilir nesne yapımı.<br>
-Blueprint create collectable object</li>
-<li class="has-line-data" data-line-start="7" data-line-end="8">Multiplayer server tipi seçimi<br>
-Multiplayer server type selection.</li>
-<li class="has-line-data" data-line-start="7" data-line-end="8">Steam SDK kullanarak multiplayer lobi sistemi kurulumu.<br>
-Steam SDK lobby system</li>
-<li class="has-line-data" data-line-start="7" data-line-end="8">Blueprint oyunu, ayarları kayıt etme ve yükleme.<br>
-BP save and load system</li>
-<li class="has-line-data" data-line-start="7" data-line-end="8">Yükleme ekranı ve harita yükleme yöntemleri<br>
-Loading screen and load map methods.</li>
-<li class="has-line-data" data-line-start="7" data-line-end="8">Garbage Collection on Unreal Engine</li>
-<li class="has-line-data" data-line-start="7" data-line-end="8">Multiplayer server replication, lag and packet loss explanation and fix.</li>
-<li class="has-line-data" data-line-start="7" data-line-end="8">Unreal Engine Optimizing (GPU, LOD, DataSmith,UV, etc.)</li>
-<li class="has-line-data" data-line-start="7" data-line-end="8">Unreal Engine Environment (light, effects, materials, etc.)</li>
+<li class="has-line-data" data-line-start="7" data-line-end="8">İsimlerinde yazıldığı gibi BP ve C++ kodları ayrılmıştır.<br>
+As written in their names, BP and C++ were used.</li>
+<li class="has-line-data" data-line-start="7" data-line-end="8">Unreal Engine 4 için giriş niteliğinde kodlar ve ileri seviye için notlar içermektedir.<br>
+İleride örnekler eklenebilir. (Contains simple introductory code and advanced level notes for Unreal Engine 4.)</li>
+<li class="has-line-data" data-line-start="7" data-line-end="8">A-Z'Ye kadar bir çok konuyu içerisinde barındırır. (It covers many topics from A-Z.)</li>
 </ul>
 <hr>
 <h1 class="code-line" data-line-start=9 data-line-end=10 ><a id="Resimli_Konu_Anlatm_9"></a>Unreal Engine 4 Scripts and Notes</h1>
@@ -52,6 +25,6 @@ Examples may be added in the future.</p>
 <hr>
 <h1 class="code-line" data-line-start=17 data-line-end=18 ><a id="License_17"></a>License</h1>
 <hr>
-<h2 class="code-line" data-line-start=19 data-line-end=21 ><a id="Herhangi_bir_yerde_paylamak_deiiklik_yapmak_iin_ncelikle_bana_ulanz_19"></a>Herhangi bir yerde paylaşmak, değişiklik yapmak için öncelikle bana ulaşınız.<br>
-Please contact me first to share or make changes anywhere.</h2>
+<h2 class="code-line" data-line-start=19 data-line-end=21 ><a id="Herhangi_bir_yerde_paylamak_deiiklik_yapmak_iin_ncelikle_bana_ulanz_19"></a>Herhangi bir yerde paylaşmak, değişiklik yapmak için öncelikle bana ulaşınız. Yazı tamamen bana aittir.<br>
+Please contact me first to share or make changes anywhere. The article belongs to me.</h2>
 <h2 class="code-line" data-line-start=21 data-line-end=23 ><a id="Creative_Commons_Zero_v10_Universal_21"></a>Creative Commons Zero v1.0 Universal</h2>
