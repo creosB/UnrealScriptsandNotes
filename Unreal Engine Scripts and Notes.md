@@ -74,11 +74,11 @@ virtual void MyPureFunction(uint32 Index) PURE_VIRTUAL(AYourActor::YourFunction;
 ```cpp
 // Fill out your copyright notice in the Description page of Project Settings.
 
-[[pragma]] once
+#pragma once
 
-[[include]] "CoreMinimal.h"
-[[include]] "UObject/Interface.h"
-[[include]] "MenuInterface.generated.h"
+#include "CoreMinimal.h"
+#include "UObject/Interface.h"
+#include "MenuInterface.generated.h"
 
 // This class does not need to be modified.
 UINTERFACE()
@@ -152,7 +152,7 @@ virtual void BeginPlay() override;
 ```
 **YourSpeakerActor.cpp**
 ```cpp
-[[include]] "YourSpeakerActor.h"
+#include "YourSpeakerActor.h"
 
 // I didn't write other functions
 
@@ -202,8 +202,8 @@ virtual void EndlPlay(const EEndPlayReason::Type);
 ```
 **YourListenerActor.cpp**
 ```cpp
-[[include]] "YourListenerActor.h"
-[[include]] "Kismet/GameplayStatics.h"
+#include "YourListenerActor.h"
+#include "Kismet/GameplayStatics.h"
 
 void AYourListenerActor::BeginPlay()
 {
@@ -228,7 +228,7 @@ void AYourListenerActor::ReceiveMessage(FString Message){
 }
 
 // remove bindings
-void AYourListenerActor==EndPlay(const EEndPlayReason==Type){
+void AYourListenerActor::EndPlay(const EEndPlayReason::Type){
 	if(Speaker != nullptr){
 	Speaker->MessageDelegate.UnBind();
 	}
@@ -279,7 +279,7 @@ virtual void BeginPlay() override;
 ```
 **YourSpeakerActor.cpp**
 ```cpp
-[[include]] "YourSpeakerActor.h"
+#include "YourSpeakerActor.h"
 
 // I didn't write other functions
 
@@ -333,8 +333,8 @@ virtual void EndlPlay(const EEndPlayReason::Type);
 ```
 **YourListenerActor.cpp**
 ```cpp
-[[include]] "YourListenerActor.h"
-[[include]] "Kismet/GameplayStatics.h"
+#include "YourListenerActor.h"
+#include "Kismet/GameplayStatics.h"
 
 void AYourListenerActor::BeginPlay()
 {
@@ -361,7 +361,7 @@ void AYourListenerActor::ReceiveMessage(FString Message){
 }
 
 // remove bindings
-void AYourListenerActor==EndPlay(const EEndPlayReason==Type){
+void AYourListenerActor::EndPlay(const EEndPlayReason::Type){
 	if(Speaker != nullptr){
 	// we changed UnBind with Remove
 	Speaker->MessageDelegate.Remove(DelegateHandle);
@@ -407,7 +407,7 @@ virtual void BeginPlay() override;
 ```
 **YourSpeakerActor.cpp**
 ```cpp
-[[include]] "YourSpeakerActor.h"
+#include "YourSpeakerActor.h"
 
 // I didn't write other functions
 
@@ -461,8 +461,8 @@ virtual void EndlPlay(const EEndPlayReason::Type);
 ```
 **YourListenerActor.cpp**
 ```cpp
-[[include]] "YourListenerActor.h"
-[[include]] "Kismet/GameplayStatics.h"
+#include "YourListenerActor.h"
+#include "Kismet/GameplayStatics.h"
 
 void AYourListenerActor::BeginPlay()
 {
@@ -489,7 +489,7 @@ void AYourListenerActor::ReceiveMessage(FString Message){
 }
 
 // remove bindings
-void AYourListenerActor==EndPlay(const EEndPlayReason==Type){
+void AYourListenerActor::EndPlay(const EEndPlayReason::Type){
 	if(Speaker != nullptr){
 	// we changed UnBind with Remove
 	Speaker->MessageDelegate.Remove(DelegateHandle);
@@ -506,7 +506,7 @@ Event Manager oluşturmak için delegate declarations sınıfı ve event manager
 
 **DelegateDeclarations.h**
 ```CPP
-[[include]] "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 
 // one parameter message event
 DECLARE_MULTICAST_DELEGATE_OneParam(FMessageEvent, FString);
@@ -528,9 +528,9 @@ virtual void BeginPlay() override;
 
 **EventManagerActor.h**
 ```CPP
-[[include]] "YourSpeakerActor.h"
-[[include]] "YourListenerActor.h"
-[[include]] "Delegates/DelegateInstanceInterface.h"
+#include "YourSpeakerActor.h"
+#include "YourListenerActor.h"
+#include "Delegates/DelegateInstanceInterface.h"
 	
 UCLASS()
 class YOURGAME_API AEventManagerActor : public AActor
@@ -618,7 +618,7 @@ void AEventManagerActor::RemoveListener(AYourListernerActor* Listener){
 
 **YourSpeakerActor.h**
 ```CPP
-[[include]] "DelegateDeclarations.h"
+#include "DelegateDeclarations.h"
 
 
 UCLASS()
@@ -657,7 +657,7 @@ virtual void BeginPlay() override;
 ```
 **YourSpeakerActor.cpp**
 ```cpp
-[[include]] "YourSpeakerActor.h"
+#include "YourSpeakerActor.h"
 
 // I didn't write other functions
 
@@ -698,7 +698,7 @@ void AYourSpeakerActor::Speak()
 }
 
 // remove bindings
-void AYourListenerActor==EndPlay(const EEndPlayReason==Type){
+void AYourListenerActor::EndPlay(const EEndPlayReason::Type){
 	TArray<AActor*> TaggedActors;
 UGameplayStatics::GetAllActorsWithTag(GetWorld(), "EventManager", TaggedActors);
 	
@@ -711,7 +711,7 @@ UGameplayStatics::GetAllActorsWithTag(GetWorld(), "EventManager", TaggedActors);
 ```
 **YourListenerActor.h**
 ```cpp
-[[include]] "DelegateDeclarations.h"
+#include "DelegateDeclarations.h"
 
 private:
 AYourSpeakerActor* Speaker;
@@ -738,8 +738,8 @@ virtual void EndlPlay(const EEndPlayReason::Type);
 ```
 **YourListenerActor.cpp**
 ```cpp
-[[include]] "YourListenerActor.h"
-[[include]] "Kismet/GameplayStatics.h"
+#include "YourListenerActor.h"
+#include "Kismet/GameplayStatics.h"
 
 void AYourListenerActor::BeginPlay()
 {
@@ -768,7 +768,7 @@ void AYourListenerActor::ReceiveMessage(FString Message){
 }
 
 // remove bindings
-void AYourListenerActor==EndPlay(const EEndPlayReason==Type){
+void AYourListenerActor::EndPlay(const EEndPlayReason::Type){
 	// remove event manager
 		TArray<AActor*> TaggedActors;
 UGameplayStatics::GetAllActorsWithTag(GetWorld(), "EventManager", TaggedActors);
@@ -1253,7 +1253,7 @@ void UYourGameInstance::Join(uint32 Index)
 }  
   
 // Join Session Delegate  
-void UYourGameInstance==OnJoinSessionComplete(FName SessionName, EOnJoinSessionCompleteResult==Type JoinResult)  
+void UYourGameInstance::OnJoinSessionComplete(FName SessionName, EOnJoinSessionCompleteResult::Type JoinResult)  
 {  
    // Get SessionInterface function from subsystem  
    UE_LOG(LogTemp, Warning, TEXT("Join Session Delegate is working!"));  
@@ -1394,7 +1394,7 @@ void UYourGameInstance::FriendsUI()
    }  
 }  
   
-void UYourGameInstance==OnNetworkFailure(UWorld* World, UNetDriver* NetDriver, ENetworkFailure==Type FailureType,  
+void UYourGameInstance::OnNetworkFailure(UWorld* World, UNetDriver* NetDriver, ENetworkFailure::Type FailureType,  
                                            const FString& ErrorString)  
 {  
    // when host left the server
@@ -1490,12 +1490,12 @@ Oyun ayarlarını kaydedeceğim için bu örnek üzerinden gideceğim. Bundan do
 
 **YourSaveGameClass.h**
 ```cpp
-[[pragma]] once
+#pragma once
 
-[[include]] "CoreMinimal.h"
-[[include]] "SettingsDataStruct.h"
-[[include]] "GameFramework/SaveGame.h"
-[[include]] "YourSaveGame.generated.h"
+#include "CoreMinimal.h"
+#include "SettingsDataStruct.h"
+#include "GameFramework/SaveGame.h"
+#include "YourSaveGame.generated.h"
 
 UCLASS()
 class YOURGAME_API UYourSaveGame : public USaveGame
@@ -1515,7 +1515,7 @@ Ayarlarımın kaydedilmesi için bir butona bastığımda bu işlemin yapmasın�
 
 **YourSettingsWidgetClass.h**
 ```cpp
-[[include]] "SettingsDataStruct.h"
+#include "SettingsDataStruct.h"
 
 private:
 	// Save Game
@@ -1523,7 +1523,7 @@ private:
 ```
 **YourSettingsWidgetClass.cpp**
 ```cpp
-[[include]] "YourSaveGameClass.h"
+#include "YourSaveGameClass.h"
 
 MyClass::MyFunc()
 {
@@ -1540,7 +1540,7 @@ MyClass::MyFunc()
 		else
 		{
 			// couldn't load save game
-			SaveGameData = Cast<UYourSaveGame>(UGameplayStatics==CreateSaveGameObject(UYourSaveGame==StaticClass()));
+			SaveGameData = Cast<UYourSaveGame>(UGameplayStatics::CreateSaveGameObject(UYourSaveGame::StaticClass()));
 
 			FString ContextString;
 			SaveGameData->SettingsData = SettingsDataTable->FindRow<FSettingsDataStruct>("ConfigData", ContextString);
@@ -1589,9 +1589,9 @@ Not: İlk sütunun ismi **Name** olmak zorunda.
 
 **YourStructClass.h
 ```cpp
-[[pragma]] once
-[[include]] "Engine/DataTable.h"
-[[include]] "SettingsDataStruct.generated.h"
+#pragma once
+#include "Engine/DataTable.h"
+#include "SettingsDataStruct.generated.h"
 
 USTRUCT(BlueprintType)
 struct FSettingsDataStruct : public FTableRowBase
@@ -1644,7 +1644,7 @@ Let’s create an httptest actor.
 
 **HttpTest.h**
 ```cpp
-[[include]] "Http.h"
+#include "Http.h"
  
 // for POST json section
 USTRUCT()
@@ -2208,7 +2208,7 @@ olarak gelecek seviyeye bizi gönderiyor.
 
 Kütüphanesini ekledikten sonra attığımız oluşturduğumuz line trace’in nereye gittiğini görebiliriz.
 ```cpp
-[[include]] "DrawDebugHelpers.h"
+#include "DrawDebugHelpers.h"
 DrawDebugLine(
 GetWorld(), // world space
 StartLocation, // start vector
@@ -2269,9 +2269,9 @@ void APawnBase::RotateTurret(FVector LookAtTarget)
 **HealthBox.h**
 ```cpp
 // Fill out your copyright notice in the Description page of Project Settings.
-[[include]] "CoreMinimal.h"
-[[include]] "GameFramework/Actor.h"
-[[include]] "HealthBox.generated.h"
+#include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
+#include "HealthBox.generated.h"
 UCLASS()
 class CONTRA_API AHealthBox : public AActor
 {
@@ -2302,10 +2302,10 @@ float GiveHealthValue = 10.0f;
 **HealthBox.cpp**
 ```cpp
 // Fill out your copyright notice in the Description page of Project Settings.
-[[include]] "HealthBox.h"
-[[include]] "Components/StaticMeshComponent.h"
-[[include]] "ContraCharacter.h"
-[[include]] "Kismet/GameplayStatics.h"
+#include "HealthBox.h"
+#include "Components/StaticMeshComponent.h"
+#include "ContraCharacter.h"
+#include "Kismet/GameplayStatics.h"
 // Sets default values
 AHealthBox::AHealthBox()
 {
@@ -2358,12 +2358,12 @@ kullandım.
 **Obstacle.h**
 ```cpp
 // Fill out your copyright notice in the Description page of Project Settings.
-[[pragma]] once
-[[include]] "CoreMinimal.h"
-[[include]] "FireObstacleSpawner.h"
-[[include]] "GameFramework/Actor.h"
-[[include]] "NiagaraComponent.h"
-[[include]] "FireObstacle.generated.h"
+#pragma once
+#include "CoreMinimal.h"
+#include "FireObstacleSpawner.h"
+#include "GameFramework/Actor.h"
+#include "NiagaraComponent.h"
+#include "FireObstacle.generated.h"
 class UActorMovement;
 class AContraCharacter;
 UCLASS()
@@ -2408,13 +2408,13 @@ virtual void BeginPlay() override;
 **Obstacle.cpp**
 ```cpp
 // Fill out your copyright notice in the Description page of Project Settings.
-[[include]] "FireObstacle.h"
-[[include]] "Components/SceneComponent.h"
-[[include]] "Contra/ContraCharacter.h"
-[[include]] "Kismet/GameplayStatics.h"
-[[include]] "Contra/ActorMovement.h"
-[[include]] "Contra/FireObstacleSpawner.h"
-[[include]] "Engine/Public/TimerManager.h"
+#include "FireObstacle.h"
+#include "Components/SceneComponent.h"
+#include "Contra/ContraCharacter.h"
+#include "Kismet/GameplayStatics.h"
+#include "Contra/ActorMovement.h"
+#include "Contra/FireObstacleSpawner.h"
+#include "Engine/Public/TimerManager.h"
 // Sets default values
 AFireObstacle::AFireObstacle()
 {
@@ -2505,11 +2505,11 @@ sağladım.
 **SpawnerV2.h**
 ```cpp
 // Fill out your copyright notice in the Description page of Project Settings.
-[[pragma]] once
-[[include]] "CoreMinimal.h"
-[[include]] "GameFramework/Pawn.h"
-[[include]] "Engine/TriggerVolume.h"
-[[include]] "FireObstacleSpawner.generated.h"
+#pragma once
+#include "CoreMinimal.h"
+#include "GameFramework/Pawn.h"
+#include "Engine/TriggerVolume.h"
+#include "FireObstacleSpawner.generated.h"
 // Direction Choice
 UENUM(BlueprintType)
 enum ESpawnDirection
@@ -2610,14 +2610,14 @@ bool DestroyWAttachment = false;
 **SpawnverV2.cpp**
 ```cpp
 // Fill out your copyright notice in the Description page of Project Settings.
-[[include]] "FireObstacleSpawner.h"
-[[include]] "Contra/ContraCharacter.h"
-[[include]] "FireObstacle.h"
-[[include]] "ActorMovement.h"
-[[include]] "ContraGameMode.h"
-[[include]] "Engine/World.h"
-[[include]] "TimerManager.h"
-[[include]] "Kismet/GameplayStatics.h"
+#include "FireObstacleSpawner.h"
+#include "Contra/ContraCharacter.h"
+#include "FireObstacle.h"
+#include "ActorMovement.h"
+#include "ContraGameMode.h"
+#include "Engine/World.h"
+#include "TimerManager.h"
+#include "Kismet/GameplayStatics.h"
 // Sets default values
 AFireObstacleSpawner::AFireObstacleSpawner()
 {
@@ -2842,10 +2842,10 @@ AController* GetOwnerController() const;
 **Gun.cpp**
 ```cpp
 // Fill out your copyright notice in the Description page of Project Settings.
-[[include]] "Gun.h"
-[[include]] "Components/SkeletalMeshComponent.h"
-[[include]] "Kismet/GameplayStatics.h"
-[[include]] "DrawDebugHelpers.h"
+#include "Gun.h"
+#include "Components/SkeletalMeshComponent.h"
+#include "Kismet/GameplayStatics.h"
+#include "DrawDebugHelpers.h"
 // Sets default values
 AGun::AGun()
 {
@@ -2956,11 +2956,11 @@ herComponent, FVector NormalImpulse, const FHitResult& Hit);
 ```
 **Projecttile.cpp**
 ```cpp
-[[include]] "ProjectileBase.h"
-[[include]] "Components/StaticMeshComponent.h"
-[[include]] "GameFramework/ProjectileMovementComponent.h"
-[[include]] "Kismet/GameplayStatics.h"
-[[include]] "Particles/ParticleSystemComponent.h"
+#include "ProjectileBase.h"
+#include "Components/StaticMeshComponent.h"
+#include "GameFramework/ProjectileMovementComponent.h"
+#include "Kismet/GameplayStatics.h"
+#include "Particles/ParticleSystemComponent.h"
 // Sets default values
 AProjectileBase::AProjectileBase()
 {
@@ -3035,9 +3035,9 @@ private:
 ```
 **Spawner.cpp**
 ```cpp
-[[include]] "Engine/World.h"
-[[include]] "GameFramework/Actor.h"
-[[include]] "TimerManager.h"
+#include "Engine/World.h"
+#include "GameFramework/Actor.h"
+#include "TimerManager.h"
 void ASpawner::BeginPlay()
 {
  Super::BeginPlay();
@@ -3079,8 +3079,8 @@ başlar başlamaz çalmaması için).
 
 **ActorMovement.h:**
 ```cpp
-[[include]] "Components/ActorComponent.h"
-[[include]] "Engine/TriggerVolume.h"
+#include "Components/ActorComponent.h"
+#include "Engine/TriggerVolume.h"
 UENUM()
 enum EPlatformDirection
 {
@@ -3131,12 +3131,12 @@ public:
 **Transfer.cpp:**
 
 ```cpp
-[[include]] "ActorMovement.h"
-[[include]] "Components/AudioComponent.h"
-[[include]] "Engine/World.h"
-[[include]] "GameFramework/Actor.h"
-[[include]] "GameFramework/PlayerController.h"
-[[define]] OUT
+#include "ActorMovement.h"
+#include "Components/AudioComponent.h"
+#include "Engine/World.h"
+#include "GameFramework/Actor.h"
+#include "GameFramework/PlayerController.h"
+#define OUT
 // Called when the game starts
 void UActorMovement::BeginPlay()
 {
@@ -3295,11 +3295,11 @@ moveable, simulate physics true olarak işaretliyoruz.
 **Grabber.h:**
 
 ```cpp
-[[include]] "CoreMinimal.h"
-[[include]] "FirstPersonCharacter.h"
-[[include]] "Components/SceneComponent.h"
-[[include]] "PhysicsEngine/PhysicsHandleComponent.h"
-[[include]] "Grabber.generated.h"
+#include "CoreMinimal.h"
+#include "FirstPersonCharacter.h"
+#include "Components/SceneComponent.h"
+#include "PhysicsEngine/PhysicsHandleComponent.h"
+#include "Grabber.generated.h"
 public:
  // Sets default values for this component's properties
  UGrabber();
@@ -3330,11 +3330,11 @@ protected:
 **Grabber.cpp:**
 
 ```cpp
-[[include]] "Grabber.h"
-[[include]] "FirstPersonCharacter.h"
-[[include]] "Engine/World.h"
-[[include]] "GameFramework/Actor.h"
-[[define]] OUT
+#include "Grabber.h"
+#include "FirstPersonCharacter.h"
+#include "Engine/World.h"
+#include "GameFramework/Actor.h"
+#define OUT
 // Sets default values for this component's properties
 UGrabber::UGrabber()
 {
@@ -3945,7 +3945,7 @@ protected:
 **MenuWidget.cpp**
 
 ```cpp
-[[include]] "MenuWidget.h"
+#include "MenuWidget.h"
  
 // Add default functionality here for any IMenuInterface functions that are not pure virtual.
 void UMenuWidget::SetMenuInterface(IMenuInterface* MenuInterface)
@@ -4035,10 +4035,10 @@ protected:
 **MenuWidget.cpp**
 
 ```cpp
-[[include]] "MainMenu.h"
-[[include]] "Components/Button.h"
-[[include]] "Components/WidgetSwitcher.h"
-[[include]] "Components/EditableTextBox.h"
+#include "MainMenu.h"
+#include "Components/Button.h"
+#include "Components/WidgetSwitcher.h"
+#include "Components/EditableTextBox.h"
  
 bool UMainMenu::Initialize()
 {
@@ -4231,7 +4231,7 @@ void UYourGameInstance::Host()
 void UYourGameInstance::Join(const FString& Adress)
 {
     if (GEngine)
-        GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor==Yellow, FString==Printf(TEXT("Joining %s"), *Adress));
+        GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("Joining %s"), *Adress));
     // join to the input adress.
     APlayerController* PlayerController = GetFirstLocalPlayerController();
     if (!ensure(PlayerController != nullptr)) { return; }
@@ -4296,9 +4296,9 @@ void Release();
 
 ekledikten sonra **.cpp** dosyasına:
 ```cpp
-[[include]] "Components/InputComponent.h"
-[[include]] "Grabber.h"
-[[include]] "GameFramework/CharacterMovementComponent.h"
+#include "Components/InputComponent.h"
+#include "Grabber.h"
+#include "GameFramework/CharacterMovementComponent.h"
 // Called to bind functionality to input
 void AFirstPersonCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
