@@ -4,54 +4,65 @@ EN: Please contact me to make changes or to share elsewhere. If you have questio
 TR: Lütfen değişiklik yapmak için veya başka yerlerde paylaşmak için iletişime geçiniz. Sorularınız veya geliştirmeleriniz varsa duymaktan memnun olurum.
 
 **Github:** [Github](https://github.com/creosB)
+
 **Youtube:** [Youtube](https://www.youtube.com/c/CreosGaming) 
+
 **The channel where we do this and more:** [Twitch](https://www.twitch.tv/creosb)
 
-1) [[#Save and Load Game C++]]
-2) [[#Using DataTable C++]]
-3) [[#API/Json Usage]]
-4) [[#Optimizing]]
-5) [[#Environment]]
-6) [[#Garbage Collection on Unreal Engine]]
-7) [[#Multiplayer Replication - LAG - Package Loss]]
-8) [[#Multiplayer Server Type Selection]]
-9) [[#Load Game Hierarchy]]
-10)	[[#Unreal Engine Diving Levels Course]]
-11)	[[#Export Settings]]
-12)	[[#Save Graphic and Audio Settings BP]]
-13)	[[#Audio Settings]]
-14)	[[#Graphic Settings (with list)]]
-15)	[[#Graphic Settings (with button)]]
-16)	[[#Create Game Instance and Save]]
-17)	[[#Open Next Level]]
-18)	[[#Draw Debug Line]]
-19)	[[#Rotate Turret (2 Methods)]]
-20)	[[#Health Box]]
-21)	[[#Obstacle]]
-22)	[[#Spawner V2]]
-23) [[#Gun]]
-24)	[[#Projectile]]
-25)	[[#Spawner]]
-26)	[[#Movable Platform]]
-27)	[[#Grab]]
-28)	[[#BP Create Collectable Object]]
-29)	[[#BP Set Game Options]]
-30)	[[#BP Load Options]]
-31)	[[#BP Load Save]]
-32)	[[#BP Create Game Options]]
-33)	[[#BP Create Save]]
-34)	[[#Asset Manager]]
-35)	[[#Gameplay Ability Plugin]]
-36)	[[#Server Type Check]]
-37)	[[#Game Start with CMD]]
-38)	[[#Steam Lobby System C++ (GameDevTV Course)]]
-39)	[[#Puzzle Platform]]
-40)	[[#Multiplayer lobby (Multiplayer with hamachi or any IP address)]]
-41)	[[#Character Control]]
-42)	[[#C++ to Blueprint Node]]
-43)	[[#Widget Animation C++]]
-44)	[[#EOS Crossplay Multiplayer C++]]
-45)	[[#OOP on Unreal Engine C++]]
+1) [#Save and Load Game C++](#save-and-load-game-c)
+2) [Using DataTable C++](#using-datatable-c)
+3) [API/Json Usage](#apijson-usage)
+4) [Optimizing](#optimizing)
+5) [Environment](#environment)
+6) [Garbage Collection on Unreal Engine](#garbage-collection-on-unreal-engine)
+7) [Multiplayer Replication - LAG - Package Loss](#multiplayer-replication---lag---package-loss)
+8) [Multiplayer Server Type Selection](#multiplayer-server-type-selection)
+9) [Load Game Hierarchy](#load-game-hierarchy)
+10) [Unreal Engine Diving Levels Course](#unreal-engine-diving-levels-course)
+11) [Export Settings](#export-settings)
+12) [Save Graphic and Audio Settings BP](#bp-save-graphic-and-audio-settings)
+13) [Audio Settings](#audio-settings)
+14) [Graphic Settings (with list)](#graphic-settings-with-list)
+15) [Graphic Settings (with button)](#graphic-settings-with-button)
+16) [Create Game Instance and Save](#create-game-instance-and-save)
+17) [Open Next Level](#open-next-level)
+18) [Draw Debug Line](#draw-debug-line)
+19) [Rotate Turret (2 Methods)](#rotate-turret-2-methods)
+20) [Health Box](#health-box)
+21) [Obstacle](#obstacle)
+22) [Spawner V2](#spawner-v2)
+23) [Gun](#gun)
+24) [Projectile](#projectile)
+25) [Spawner](#spawner)
+26) [Movable Platform](#movable-platform)
+27) [Grab](#grab)
+28) [BP Create Collectable Object](#bp-create-collectable-object)
+29) [BP Set Game Options](#bp-set-game-options)
+30) [BP Load Options](#bp-load-options)
+31) [BP Load Save](#bp-load-save)
+32) [BP Create Game Options](#bp-create-game-options)
+33) [BP Create Save](#bp-create-save)
+34) [Asset Manager](#asset-manager)
+35) [Gameplay Ability Plugin](#gameplay-ability-plugin)
+36) [Server Type Check](#server-type-check)
+37) [Game Start with CMD](#game-start-with-cmd)
+38) [Steam Lobby System C++ (GameDevTV Course)](#steam-lobby-system-c-gamedevtv-course)
+39) [Puzzle Platform](#puzzle-platform)
+40) [Multiplayer lobby (Multiplayer with hamachi or any IP address)](#multiplayer-lobby-multiplayer-with-hamachi-or-any-ip-address)
+41) [Character Control](#character-control)
+42) [C++ to Blueprint Node](#c-to-blueprint-node)
+43) [Widget Animation C++](#widget-animation-c)
+44) [Image Render](#image-render)
+45) [EOS Crossplay Multiplayer C++](#eos-crossplay-multiplayer-c)
+   - [EOS Kurulumu ve Ayarları](#eos-kurulumu-ve-ayarları)
+   - [EOS Kullanımı](#eos-kullanımı)
+46) [#OOP on Unreal Engine C++](#oop-on-unreal-engine-c)
+   - [Abstract - Interface](#abstract---interface)
+   - [Event Handling](#event-handling)
+      - [Single Delegate](#single-delegate)
+      - [Multicast Delegate](#multicast-delegate)
+      - [Event](#event)
+      - [Event Manager](#event-manager)    
 
 
 # OOP on Unreal Engine C++
@@ -934,7 +945,7 @@ OnlineSubsystemEOS.cpp (Add a new line below 242)
 Project Settings Kısmından EOS Plugin'e geliyoruz ve Crossplay Settings'in altında olan tüm ayarları true yapıyoruz.
 
 Tüm kurulumumuzu bu şekilde tamamlamış olduk. Sırada oyun içerisinde oturum oluşturma, oyuna katılma, arkadaş davet etme gibi fonksiyonları nasıl ekleyeceğinizi göstereceğim. Proje halinde kullanımını görmek isterseniz Art Gallery github repository'e bakabilirsiniz.
-[Örnek multiplayer menü](https://youtu.be/GVvX_9bMIPk)
+[Örnek multiplayer menü](./Pics/https://youtu.be/GVvX_9bMIPk)
 
 ## EOS Kullanımı
 EOS'in kütüphanesi içerisinde olan fonksiyonları kullanmamız için öncelikle game instance oluşturuyoruz. İçerisine oyun boyunca kullanacağımız fonksiyonları yazarak başka sınıflardan (menu widget vb.) gerekli fonksiyonu çağırıyoruz.
@@ -1421,7 +1432,7 @@ Oyunu aynı bilgisayar üzerinden oynayarak test etmek için bir metin belgesi o
 start "" "YOURENGINEPATH\Engine\Binaries\Win64\UE4Editor.exe" "YOURGAMEPATH.uproject" -game -WINDOWED -ResX=450 -ResY=450 -NOSTEAM
 ```
 
-Menü yapımı ve projeye dönüştürülmüş hali için [Örnek multiplayer menü](https://youtu.be/GVvX_9bMIPk)
+Menü yapımı ve projeye dönüştürülmüş hali için [Örnek multiplayer menü](./Pics/https://youtu.be/GVvX_9bMIPk)
 
 # Image Render
 Render alırken aşağıda bulunan ayarlar ile render almak daha iyi sonuç verir.
@@ -1907,112 +1918,112 @@ Add the post process volume and atmospheric fog. You can change game looking sty
 
 # Garbage Collection on Unreal Engine
 
-![Image](Unreal-Engine-C--._image1.png)
+![Image](./Pics/Unreal-Engine-C--._image1.png)
 
-![Image](Unreal-Engine-C--.image4.png)
+![Image](./Pics/Unreal-Engine-C--.image4.png)
 
-![Image](Unreal-Engine-C--.image27.png)
+![Image](./Pics/Unreal-Engine-C--.image27.png)
 
 You can check multiplayer puzzle mechanic video for this.
 
-![Image](Unreal-Engine-C--.image13.png)
+![Image](./Pics/Unreal-Engine-C--.image13.png)
 
-![Image](Unreal-Engine-C--.image9.png)
+![Image](./Pics/Unreal-Engine-C--.image9.png)
 
-![Image](Unreal-Engine-C--.image40.png)
+![Image](./Pics/Unreal-Engine-C--.image40.png)
 
-![Image](Unreal-Engine-C--.image23.png)
+![Image](./Pics/Unreal-Engine-C--.image23.png)
 
 # Multiplayer Replication - LAG - Package Loss 
 
 <h3>Replication Actor Roles</h3>
 
-![Image](Unreal-Engine-C--.image21.png)
+![Image](./Pics/Unreal-Engine-C--.image21.png)
 
-![Image](Unreal-Engine-C--.image35.png)
+![Image](./Pics/Unreal-Engine-C--.image35.png)
 
-![Image](Unreal-Engine-C--.image38.png)
+![Image](./Pics/Unreal-Engine-C--.image38.png)
 
 <h3>What is the packet loss ?</h3>
 
-![Image](Unreal-Engine-C--.image62.png)
+![Image](./Pics/Unreal-Engine-C--.image62.png)
 
-![Image](Unreal-Engine-C--.image32.png)
+![Image](./Pics/Unreal-Engine-C--.image32.png)
 
-![Image](Unreal-Engine-C--.image24.png)
+![Image](./Pics/Unreal-Engine-C--.image24.png)
 
 <h3>What is the LAG ?</h3>
 
-![Image](Unreal-Engine-C--._image2.png)
+![Image](./Pics/Unreal-Engine-C--._image2.png)
 
-![Image](Unreal-Engine-C--.image30.png)
+![Image](./Pics/Unreal-Engine-C--.image30.png)
 
 <h3>Let’s visualize the lag</h3>
 
-![Image](Unreal-Engine-C--.image7.png)
+![Image](./Pics/Unreal-Engine-C--.image7.png)
 
-![Image](Unreal-Engine-C--.image15.png)
+![Image](./Pics/Unreal-Engine-C--.image15.png)
 
 <h3>Fix the LAG Methods</h3>
 
-![Image](Unreal-Engine-C--.image57.png)
+![Image](./Pics/Unreal-Engine-C--.image57.png)
 
 **Solutions:**
 
-![Image](Unreal-Engine-C--.image34.png)
+![Image](./Pics/Unreal-Engine-C--.image34.png)
 
 **Let’s start!**
 
-![Image](Unreal-Engine-C--.image19.png)
+![Image](./Pics/Unreal-Engine-C--.image19.png)
 
 <h3>Replication Refactor for movement bindings</h3>
 
-![Image](Unreal-Engine-C--.image44.png)
+![Image](./Pics/Unreal-Engine-C--.image44.png)
 
 **What is the correct smooth movement graph ?**
 
-![Image](Unreal-Engine-C--.image42.png)
+![Image](./Pics/Unreal-Engine-C--.image42.png)
 
-![Image](Unreal-Engine-C--.image10.png)
+![Image](./Pics/Unreal-Engine-C--.image10.png)
 
-![Image](Unreal-Engine-C--.image26.png)
+![Image](./Pics/Unreal-Engine-C--.image26.png)
 
-![Image](Unreal-Engine-C--.image3.png)
+![Image](./Pics/Unreal-Engine-C--.image3.png)
 
-![Image](Unreal-Engine-C--.image31.png)
+![Image](./Pics/Unreal-Engine-C--.image31.png)
 
-![Image](Unreal-Engine-C--.image20.png)
+![Image](./Pics/Unreal-Engine-C--.image20.png)
 
 <h3>Simulate and make smooth movement</h3>
 
-![Image](Unreal-Engine-C--.image36.png)
+![Image](./Pics/Unreal-Engine-C--.image36.png)
 
-![Image](Unreal-Engine-C--.image29.png)
+![Image](./Pics/Unreal-Engine-C--.image29.png)
 
-![Image](Unreal-Engine-C--.image17.png)
+![Image](./Pics/Unreal-Engine-C--.image17.png)
 
 
 # Multiplayer Server Type Selection
 
 Comparison for multiplayer game Unreal Engine support.
 
-![Image](Unreal-Engine-C--.image6.png)
+![Image](./Pics/Unreal-Engine-C--.image6.png)
 
-![Image](Unreal-Engine-C--.image37.png)
+![Image](./Pics/Unreal-Engine-C--.image37.png)
 
-![Image](Unreal-Engine-C--.image12.png)
+![Image](./Pics/Unreal-Engine-C--.image12.png)
 
-![Image](Unreal-Engine-C--.image18.png)
+![Image](./Pics/Unreal-Engine-C--.image18.png)
 
 <h3>Let’s divide section by section</h3>
 
-![Image](Unreal-Engine-C--.image14.png)
+![Image](./Pics/Unreal-Engine-C--.image14.png)
 
-![Image](Unreal-Engine-C--.image16.png)
+![Image](./Pics/Unreal-Engine-C--.image16.png)
 
 # Load Game Hierarchy
 
-![Image](Unreal-Engine-C--.image22.png)
+![Image](./Pics/Unreal-Engine-C--.image22.png)
 
 # Unreal Engine Diving Levels Course 
 
@@ -2042,7 +2053,7 @@ https://docs.unrealengine.com/4.27/en-US/SharingAndReleasing/XRDevelopment/VR/VR
 
 **Example of fade to solid color method:** c0_lobbymap Open Level Blueprint
 
-![Image](Unreal-Engine-C--._image39.png)
+![Image](./Pics/Unreal-Engine-C--._image39.png)
 
 <h3>Example of VR Splash Screen</h3>
 c4_lobby 
@@ -2103,9 +2114,9 @@ shaders used are included, as well as make sure there are no unused shaders in t
 
 Play tuşunun orada bulunan project settings kısmına basıp aşağıdaki ayarları yapıyoruz.
 
-![Image](Unreal-Engine-C--.__indir.png)
+![Image](./Pics/Unreal-Engine-C--.__indir.png)
 
-![Image](Unreal-Engine-C--.__indir2.png)
+![Image](./Pics/Unreal-Engine-C--.__indir2.png)
 
 
 # BP Save Graphic and Audio Settings
@@ -2113,12 +2124,12 @@ Save Game kısmında oluşturduğumuz değerlere ekstra olarak grafik ve ses kı
 değerleri ekliyoruz. Bunları yaptıktan sonra widget’a dönüp Apply butonuna basıldıktan ve 
 ayarları uyguladıktan sonra save’e değerlerin son hallerini aktarıyoruz.
 
-![settings](Unreal-Engine-C--._indir2.png)
+![settings](./Pics/Unreal-Engine-C--._indir2.png)
 
 Bu ayarları geri çıkıp girdiğimizde gitmemesi ve yazı olarak da yazması için aşağıdaki gibi event 
 pre construct kısmına ekliyoruz.
 
-![options](Unreal-Engine-C--.__indir3.png)
+![options](./Pics/Unreal-Engine-C--.__indir3.png)
 
 # Audio Settings
 
@@ -2128,7 +2139,7 @@ da aynı şekilde yapılıyor.
 
 **Not:** Sesin tipinin ne olduğunu seçmeyi ve soundmix oluşturmayı unutmuyoruz.
 
-![audio](Unreal-Engine-C--.indir%20(1).png)
+![audio](./Pics/Unreal-Engine-C--.indir%20(1).png)
 
 # Graphic Settings (with list)
 
@@ -2136,23 +2147,23 @@ List şeklinde grafik ayarları menüsü yapmak için ilk önce settings adında
 oluşturuyoruz. Ardından main menu kısmında önceden oluşturduğumuz butona bunu ekliyoruz 
 ve bu sayede widgetlar arasında geçiş sağlıyoruz.
 
-![button](Unreal-Engine-C--.indir2.png)
+![button](./Pics/Unreal-Engine-C--.indir2.png)
 
 Grafik ayarlarından geri dönmek için de aynı sistemi kullanıyoruz.
 
-![resolution](Unreal-Engine-C--._indir3.png)
+![resolution](./Pics/Unreal-Engine-C--._indir3.png)
 
 Ekrana bu şekilde comboBox ekledikten sonra default options kısmına seçilebilecek çözünürlüğü 
 giriyoruz ve ayarların en alt kısmında bulunan OnClicked’e tıklıyoruz.
 ScreenResMap adında string değeri oluşturuyoruz ve onları bu şekilde ayarlıyoruz.(Map kısmının 
 sağ tarafında bulunanlar karşılık geldiği kod)
 
-![resVariable](Unreal-Engine-C--._indir4.png)
+![resVariable](./Pics/Unreal-Engine-C--._indir4.png)
 
 Tüm grafik ayarlarını yaptıktan sonra onaylama görevi görmesi için Apply adında bir buton 
 oluşturalım ve aynı şekilde tıklandığında çalışmasını sağlayalım.
 
-![execute](Unreal-Engine-C--._indir5.png)
+![execute](./Pics/Unreal-Engine-C--._indir5.png)
 
 # Graphic Settings (with button)
 
@@ -2160,28 +2171,28 @@ Yan taraflarında arttırma ve azaltma butonları bulunan grafik ayarları menü
 önce settings adında bir widget oluşturuyoruz. Ardından main menu kısmında önceden 
 oluşturduğumuz butona bunu ekliyoruz ve bu sayede widgetlar arasında geçiş sağlıyoruz.
 
-![Button](Unreal-Engine-C--.indir3.png)
+![Button](./Pics/Unreal-Engine-C--.indir3.png)
 
 Grafik ayarlarından geri dönmek için de aynı sistemi kullanıyoruz.
 
-![Graphics](Unreal-Engine-C--.indir4.png)
+![Graphics](./Pics/Unreal-Engine-C--.indir4.png)
 
 Ekrana bu şekilde butonları ekledikten sonra sol kısma increase, sağ kısma decrease adını 
 veriyoruz ve ayarların en alt kısmında bulunan OnClicked’e tıklıyoruz.
 ScreenResMap ve ScreenResArray adında 2 adet string değeri oluşturuyoruz ve onları bu şekilde 
 ayarlıyoruz.(Map kısmının sağ tarafında bulunanlar karşılık geldiği kod)
 
-![Value](Unreal-Engine-C--.indir5.png)
+![Value](./Pics/Unreal-Engine-C--.indir5.png)
 
 Space adında text değeri oluşturup bırakıyoruz bu sadece 3. değer sonrası boşluk gelmesini engelliyor. 
 
-![settings](Unreal-Engine-C--.indir6.png)
+![settings](./Pics/Unreal-Engine-C--.indir6.png)
 
 Decrase kısmı için ise sadece + 1 kısmını – 1 yapıyoruz.
 Tüm grafik ayarlarını yaptıktan sonra onaylama görevi görmesi için Apply adında bir buton 
 oluşturalım ve aynı şekilde tıklandığında çalışmasını sağlayalım.
 
-![execute](Unreal-Engine-C--.indir7.png)
+![execute](./Pics/Unreal-Engine-C--.indir7.png)
 
 Decrase kısmı için ise sadece + 1 kısmını – 1 yapıyoruz.
 Tüm grafik ayarlarını yaptıktan sonra onaylama görevi görmesi için Apply adında bir buton 
@@ -2193,7 +2204,7 @@ Game Intance blueprint olarak oluşturduktan sonra SaveSlotName string değeri v
 SaveGameData obje referansı oluşturuyoruz bunun sonucunda bize eğer kayıt dosyası yoksa 
 oluşturmayı eğer varsa onu yüklemeyi sağlıyor.
 
-![Create Game Instance and Save](Unreal-Engine-C--._indir%202.png)
+![Create Game Instance and Save](./Pics/Unreal-Engine-C--._indir%202.png)
 
 # Open Next Level
 
@@ -2202,7 +2213,7 @@ tetiklenecek blueprint şablonu.
 Not: İlk önce levels adında string array oluşturuyoruz ardından şablonu uyguluyoruz ve otomatik 
 olarak gelecek seviyeye bizi gönderiyor.
 
-![Open Next Level](Unreal-Engine-C--._indir.png)
+![Open Next Level](./Pics/Unreal-Engine-C--._indir.png)
 
 # Draw Debug Line
 
@@ -2353,7 +2364,7 @@ oluşturuyoruz ve istediğimiz herhangi bir niagara efekti ekliyoruz.
 kullandım.
 - 2 engel arasına gelindiğinde karakterin canını azaltır.
 - Görünüşü ve örnek kullanımı: 
-[reddit](www.reddit.com/r/unrealengine/comments/o97swk/random_obstacle_spawner_with_niagara_effect/)
+[reddit](./Pics/www.reddit.com/r/unrealengine/comments/o97swk/random_obstacle_spawner_with_niagara_effect/)
 
 **Obstacle.h**
 ```cpp
@@ -2500,7 +2511,7 @@ Yöntem:
 + Spawner'ı parent, oluşturulan nesneyi child olarak ayarladım, böylece iletişim kurmasını 
 sağladım.
 Örnek kullanımı ve görünüşü: 
-[reddit](www.reddit.com/r/unrealengine/comments/o97swk/random_obstacle_spawner_with_niagara_effect/)
+[reddit](./Pics/www.reddit.com/r/unrealengine/comments/o97swk/random_obstacle_spawner_with_niagara_effect/)
 
 **SpawnerV2.h**
 ```cpp
@@ -3433,51 +3444,51 @@ FHitResult UGrabber::GetFirstPhysicsBodyInReach() const
 
 <h3>1) Create UniqueID</h3>
 
-![Image](Unreal-Engine-C--.image56.png)
+![Image](./Pics/Unreal-Engine-C--.image56.png)
 
 <h3>2) Return UniqueID</h3>
 
-![Image](Unreal-Engine-C--.image53.png)
+![Image](./Pics/Unreal-Engine-C--.image53.png)
 
 <h3>3) Save Collectable UniqueID (when you hit the object)</h3>
 
-![Image](Unreal-Engine-C--.image55.png)
+![Image](./Pics/Unreal-Engine-C--.image55.png)
 
 <h3>4) Get UniqueID</h3>
 
-![Image](Unreal-Engine-C--.image41.png)
+![Image](./Pics/Unreal-Engine-C--.image41.png)
 
 <h3> 5) Save Collected Object</h3>
 
-![Image](Unreal-Engine-C--.image58.png)
+![Image](./Pics/Unreal-Engine-C--.image58.png)
 
 <h3> 6) Load Collected Object</h3>
 
-![Image](Unreal-Engine-C--.__image59.png)
+![Image](./Pics/Unreal-Engine-C--.__image59.png)
 
 <h3>7) Level Blueprint Change State</h3>
 
-![Image](Unreal-Engine-C--.image61.png)
+![Image](./Pics/Unreal-Engine-C--.image61.png)
 
 # BP Set Game Options
 
-![Image](Unreal-Engine-C--.image51.png)
+![Image](./Pics/Unreal-Engine-C--.image51.png)
 
 # BP Load Options
 
-![Image](Unreal-Engine-C--._image52.png)
+![Image](./Pics/Unreal-Engine-C--._image52.png)
 
 # BP Load Save
 
-![Image](Unreal-Engine-C--.image49.png)
+![Image](./Pics/Unreal-Engine-C--.image49.png)
 
 # BP Create Game Options
 
-![Image](Unreal-Engine-C--.image50.png)
+![Image](./Pics/Unreal-Engine-C--.image50.png)
 
 # BP Create Save
 
-![Image](Unreal-Engine-C--.image47.png)
+![Image](./Pics/Unreal-Engine-C--.image47.png)
 
 # Asset Manager
 
@@ -3543,7 +3554,7 @@ DefaultPlatformService=NULL
 ```
 ekliyoruz.
 
-![steamsub](Unreal-Engine-C--.image28.png)
+![steamsub](./Pics/Unreal-Engine-C--.image28.png)
 
 <h2>Create Session Interface</h2>
 
@@ -3620,7 +3631,7 @@ else
 }
 ```
 
-![Image](Unreal-Engine-C--._image5.png)
+![Image](./Pics/Unreal-Engine-C--._image5.png)
 
 **Non-Seamless Travel:** Tüm kullanıcıları ilk önce oyundan çıkarır (disconnect) sonra tekrar bağlar. Bundan dolayı haritayı yüklerken oyun donar ve yüklenince tekrar akıcılaşır.
 
@@ -3630,7 +3641,7 @@ else
 ```
 kullanılır.
 
-![Image](Unreal-Engine-C--.image11.png)
+![Image](./Pics/Unreal-Engine-C--.image11.png)
 
 ```cpp
 UFUNCTION(NetMulticast, unreliable, WithValidation)
@@ -3708,7 +3719,7 @@ void AsquidgameCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
 <h2>Sunucu testi yaparken</h2>
 Sanal bir şekilde packet loss, lag vb. şeyler için host olduğumuz oyunda konsolu açıp NetEmulation sonrasında
 
-![Image](Unreal-Engine-C--.image48.png)
+![Image](./Pics/Unreal-Engine-C--.image48.png)
 
 birini kullanıyoruz.
 
@@ -3902,11 +3913,11 @@ Platformun üzerine geldiğimiz zaman çalışmaya, bıraktığımız zaman ise 
 
 Aşağıdaki gibi bir widget oluşturuyoruz.
 
-![mainmenu](Unreal-Engine-C--.image43.png)
+![mainmenu](./Pics/Unreal-Engine-C--.image43.png)
 
 Join butonuna basıldığında widget’lar arasında geçiş yapabilmek için WidgetSwitcher kullanıyoruz ve 2. Widget’ımızı aynı blueprint içerisinde oluşturuyoruz.
 
-![join](Unreal-Engine-C--.image46.png)
+![join](./Pics/Unreal-Engine-C--.image46.png)
 
 Sayfalar arasında veriyi iletebilmek için Inferface yaratıyoruz.
 
@@ -3922,7 +3933,7 @@ public:
 .cpp dosyasına herhangi bir tanımlama yapmamıza gerek yok.
 Oyun içinden de aynı şekilde main menu’ye gitmek için widget oluşturuyoruz.
 
-![ingamemenu](Unreal-Engine-C--.image45.png)
+![ingamemenu](./Pics/Unreal-Engine-C--.image45.png)
 
 Artık butonlara tıklayabilmek ve leveller arası geçiş yaparken widget’ların açık kalmamasını sağlamak kaldı. Bunu yapmak için UUserWidget tanımlıyoruz.
 
@@ -4268,11 +4279,11 @@ void UYourGameInstance::LoadMainMenu()
 
 <h1> Let’s visualize the menu system</h1>
 
-![menusystem](Unreal-Engine-C--.image33.png)
-![menusystem2](Unreal-Engine-C--.image8.jpg)
-![Image](Unreal-Engine-C--.image60.png)
-![Image](Unreal-Engine-C--.image54.png)
-![Image](Unreal-Engine-C--.image25.png)
+![menusystem](./Pics/Unreal-Engine-C--.image33.png)
+![menusystem2](./Pics/Unreal-Engine-C--.image8.jpg)
+![Image](./Pics/Unreal-Engine-C--.image60.png)
+![Image](./Pics/Unreal-Engine-C--.image54.png)
+![Image](./Pics/Unreal-Engine-C--.image25.png)
 
 Artık tüm işlemlerimizi halletiğimize göre birisi host olup diğeri onun vereceği IP adresine bağlanabilir.
 Ör: https://www.youtube.com/watch?v=vXsprCUXH68
@@ -4344,11 +4355,11 @@ Blueprint pure: No node function in bp
 UFUNCTION(BlueprintCallable, BlueprintPure)
 FVector GetMaxGrabLocation() const;
 ```
-![BlueprintPure](Unreal-Engine-C--.image1.png)
+![BlueprintPure](./Pics/Unreal-Engine-C--.image1.png)
 
 Blueprint pure: No node function in bp
 ```
 UFUNCTION(BlueprintImplementableEvent)
 void NotifyQuestActor(AActor* Actor);
 ```
-![BlueprintImplementableEvent](Unreal-Engine-C--.image2.png)
+![BlueprintImplementableEvent](./Pics/Unreal-Engine-C--.image2.png)
