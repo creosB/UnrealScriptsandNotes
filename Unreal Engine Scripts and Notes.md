@@ -9,6 +9,19 @@ TR: Lütfen değişiklik yapmak için veya başka yerlerde paylaşmak için ilet
 
 **The channel where we do this and more:** [Twitch](https://www.twitch.tv/creosb)
 
+0) [Unreal Engine Basics](#unreal-engine-basics)
+   1) [The Object Class](#the-object-class)
+   2) [The Actor Class](#the-actor-class)
+   3) [The Pawn Class](#the-pawn-class)
+   4) [The Character Class](#the-character-class)
+   5) [Components](#components)
+   6) [Custom Material](#custom-material)
+   7) [Material Inputs](#material-inputs)
+   8) [Lights](#lights)
+   9) [Lights](#lights-properties)
+   10) [Unreal Header Tool (UHT)](#unreal-header-tool-uht)
+   11) [UPROPERTY](#uproperty)
+   12) [UFUNCTION](#ufunction)
 1) [#Save and Load Game C++](#save-and-load-game-c)
 2) [Using DataTable C++](#using-datatable-c)
 3) [API/Json Usage](#apijson-usage)
@@ -51,6 +64,10 @@ TR: Lütfen değişiklik yapmak için veya başka yerlerde paylaşmak için ilet
 40) [Multiplayer lobby (Multiplayer with hamachi or any IP address)](#multiplayer-lobby-multiplayer-with-hamachi-or-any-ip-address)
 41) [Character Control](#character-control)
 42) [C++ to Blueprint Node](#c-to-blueprint-node)
+    1) [BlueprintImplementableEvent](#blueprintimplementableevent)
+    2) [BlueprintNativeEvent](#blueprintnativeevent)
+    3) [BlueprintCallable](#blueprintcallable)
+    4) [BlueprintPure](#blueprint-pure)
 43) [Widget Animation C++](#widget-animation-c)
 44) [Image Render](#image-render)
 45) [EOS Crossplay Multiplayer C++](#eos-crossplay-multiplayer-c)
@@ -64,6 +81,124 @@ TR: Lütfen değişiklik yapmak için veya başka yerlerde paylaşmak için ilet
       - [Event](#event)
       - [Event Manager](#event-manager)    
 
+# Unreal Engine Basics
+
+Hierarchy:
+Object Class --> Actor Class --> Pawn Class  --> Character
+
+## The Object Class
+Unreal Engine'de bulunan sınıfları hiyerarşik olarak düşünecek olursak,
+en üst sınıf olarak yer alır. Tüm sınıfların ihtiyacı olan en temel becerileri
+içersinde bulundurur. Örneğin; unreal engine'nin reflection system
+takibini yapılabilir.
+Object class'ın en temel olmasının sebebi, level'e yerleştirilemiyor
+olmasından dolayıdır. Oyunda bir level'e yerleştirilen bir nesnenin
+en azından bir Actor class'tan kalıtılmış olmalıdır.
+
+## The Actor Class
+Actor class, Object class'dan kalıtılmıştır. Bunun sayesinde temel özellikleri
+kazanmış ve kendi içerisinde birçok fonksiyona, özelliğe sahiptir. Bu sınıflar
+arası en büyük fark ise actor class'ın level'e yerleştirilebiliyor olmasıdır.
+Actor class içerisinde gelen fonksiyon ve özelliklere (location, destroy vb.)  istediğiniz gibi ekleme yapabilirsiniz. Unreal Engine'de en yaygın sınıflardan birisidir.
+
+## The Pawn Class
+Pawn class, Actor class'dan kalıtılmıştır. Hem actor class'ın özelliklerine
+sahip hem de controller'a sahip olabilir. Bunun sayesinde oyuncudan
+bilgi alarak hareket edebilir. Örneğin; Actor class, level içerisinde bulunan
+kapı, sandalye static veya kırılabilir, yok edilebilir nesneler olabilirken
+pawn'lar bir şey ile kontrol edilmeleri gerekir. Bu oyuncu veya AI/Bot olabilir.
+
+## The Character Class
+Character class, Pawn class'dan kalıtılmıştır. Tıpkı pawn gibi character
+class'da controller'e sahiptir. Character class, pawn'dan farklı olarak
+daha çok özelleştirilmiş fonksiyonlara, özelliklere sahiptir. Örneğin;
+1) Capsule component ile birlikte gelir. Bunun sayesinde
+   collision kazanarak fizik etkileşimine girebilir.
+2) Character movement component ile birlikte gelir. Character sınıfına
+   özgü birçok fonksiyonu, değeri barındırır.  Bu fonksiyon ve değerler
+   oyunlarda sık karşılaşılan problemleri çözen bir başlangıç paketi gibi
+   düşünülebilir. Örneğin karakterin hızı, hızlanması veya online için
+   gerekli fonksiyonları barındırır.
+   Components
+   Bir sınıfta bulunan fonksiyonları başka sınıflara da taşımak isteyebiliriz.
+   Kısacası modüler fonksiyonlara ihtiyacımız olabilir. Bu durumda components
+   kullanırız. Sonuç olarak, içerisinde barındırdığı fonksiyonları başka
+   sınıflar ile paylaşır.
+
+## Components
+Bir sınıfta bulunan fonksiyonları başka sınıflara da taşımak isteyebiliriz.
+Kısacası modüler fonksiyonlara ihtiyacımız olabilir. Bu durumda components
+kullanırız. Sonuç olarak, içerisinde barındırdığı fonksiyonları başka
+sınıflar ile paylaşır.
+
+## Custom Material
+**Constant3Vector:** R, G, B değerlerini barındıran bir vektördür.
+3 + Sol tık ile bir vektör yaratılabilir.
+**Base Color:** Materyalin ana renk kanalıdır. Örneğin;  bir vektör bağlanıldığında,
+o vektörün direkt olarak rengini materyalde görebiliriz.
+
+## Material Inputs
+Material oluşturduğumuzda tercihimize bağlı olarak değer
+verebileceğimiz girişler vardır. Bunlar;
+1) **Metallic:** Materyalin metalik kanalına erişmemizi sağlar. Bu kanala
+   bir vektör yerine tek bir sayı (single constant) verilebilir. 1 + sol tık ile
+   single constant yaratılabilir.
+2) **Specular:** Materyalin ne kadar parlak görüleceğinin bilgisini vermemizi
+   sağlar. Bu bilgi sayesinde ne kadar ışığın yansıtıldığı belirlenmiş olur. Specular değeri 0 ile 1 arasındadır. 0 değer verildiğinde hiç ışık
+   yansıması olmadığı, 1 verildiğinde ise çok sayıda ışık yansıması olduğu
+   anlamına gelir.
+3) **Roughness:** Yansımanın ne kadar keskin olacağını belirleyen materyal
+   kanalıdır. Alacağı değer yüksek olduğunda ışığın dağılmasına, yansımanın daha az belirgin olmasına neden olur. Değer düşük olduğunda ise ışık kaynağı keskin ve belirgindir.
+4) **Emissive Color:** Materyale verilen rengin ışıldamasını, parlamasını sağlar.
+5) **Normal:** Işığın materyal yüzeyine nasıl yansıyacağını kontrol eden kanaldır.
+   Normal maps kullanılarak karışık yüzey detaylarında bir ilüzyon yaratılmış olur.
+   Material Instance: Bir materyalin birden fazla tipi gerektiğinde
+   material instance oluşturarak sadece gerekli olan parametreyi kolayca
+   değiştirir ve ana materyale zarar vermemiş oluruz.
+
+## Lights
+Unreal Engine'de farklı işlevlere sahip 4 ışık tipi bulunmaktadır.
+1) **Point Light:** Mekezini noktasını (origin) hedef alarak daire biçiminde
+   aydınlatma sağlar. Diğer ışık kaynaklarına kıyasla performansa etkisi fazladır. Bundan dolayı hareketli olarak fazla kullanılması durumunda fps düşüşlerine sebep olabilir.
+2) **Spot Light:** Koni şeklinde aydınlatma uzak mesafeden aydınlatma sağlar. Spot ışığını ayarlarken "Inner Cone" ve "Outer Cone" ayarları bulunur. Işığın tüm parlaklığı inner cone ayarı ile belirlenir. Outer cone ayarıyla birlikte kullanılması durumunda aydınlık olan koniye ne kadar müdahale edileceği belirlenmiş olur. Son görüntü olarak inner cone ile daire biçiminde parlaklık sağlarken, outer cone ile dairenin dış kısımlarını soldurmuş oluruz.
+3) **Directional Light:** Güneş ışığını simüle eden ışık kaynağıdır. Directional light oluşturulduğunda simüle edilecek ana ışık kaynağı, "light source" kısmından seçilmelidir.
+4) **Sky Light:** Sky light, daha önceden hazırlanmış olan sahnenin (cube map) ışık bilgisini iletmek ile görevlidir. Cube map eklenmesi ile birlikte ışık kaynağı olan directional light'a ekstra gerçekçilik eklenmiş olur.
+
+Not: Işık kaynaklarının kullanım alanlarını anlamak, oyuncunun hissiyatını ve oyuna olan bakışını değiştirirken bir yandan da optimizasyona büyük katkı sağlar.
+
+## Lights Properties
+**Intensity:** Candela cinsinden aydınlatmayı ayarlar.
+**Light Color:** R, G, B ile rengini belirler.
+**Attenuation Radius:** Işığın görülebilir olarak etkilediği alanı belirler.
+Işığa tıklandığında etrafında çıkan daire ile bunu gösterir. Değerin
+yüksek olması render etmeyi zorlaştırır.
+**Cast Shadows:** Gölgeleri kapatmaya yarar. Performansa olumlu
+etkisi vardır.
+**Light Mobility:** Işığın hareket edip, etmeyeceğini belirlemenin
+3 farklı seçeneği vardır.
+* **Static:** Static lights can't change or can't move in the game.
+* **Stationary:** Stationary lights can change intensity and color but can't move in the game.
+* **Movable:** Movable lights can change intensity, color and it can move but this is the most computationally expensive settings for a light.
+
+## Unreal Header Tool (UHT)
+Motor için yazılan header file (.h) derlenmesinde ve kodların oluşturulmasında görevli araçtır. Header dosyasına yazılan (UCLASS() veya benzerleri) makroyu tanıyarak işleme başlar. Bunun sayesinde yazılan fonksiyonun, değerlerin blueprint'e aktarılması veya garbage collection sistemine dahil edilmesi sağlanır.
+
+## UPROPERTY
+**UPROPERTY()** makrosu kullanılarak oluşturulan değerlerin garbage collection sistemine dahil edilmesi ve blueprint'e aktarılması sağlanır. İçerisine yazılabilecek olan anahtar kelimelere bağlı olarak, değerin motor içerisinden düzenlenmesi, görüntülenmesi kısıtlanabilir.
+
+**Bunlardan bazıları**
+* VisibleAnywhere
+* VisibleDefaultsOnly
+* VisibleInstanceOnly
+* EditAnywhere
+* EditInstanceOnly
+* EditDefaultsOnly
+* BlueprintReadOnly
+* BlueprintReadWrite
+* Category = "Settings Title"
+
+## UFUNCTION
+**UFUNCTION()** makrosu, yazılan fonksiyonun blueprint'e aktarılmasını sağlar. Bu aktarılma sırasında yazılan anahtar kelimeye bağlı olarak blueprint node'unun tipi değiştirilir. Aynı zamanda blueprint içerisinden yazılan cpp fonksiyonlarının çağrılmasına olanak tanır.
 
 # OOP on Unreal Engine C++
 C++ ile nasıl yapıldıktan sonra buradan devam etmenizi tavsiye ederim. Bunun için C++ OOP yazımı inceleyebilirsiniz.
@@ -1917,6 +2052,10 @@ Add the post process volume and atmospheric fog. You can change game looking sty
 
 
 # Garbage Collection on Unreal Engine
+
+Sınıf içerisinde oluşturulan nesneler bellekte yer kaplar. Bu yerin boşaltılması veya yerini başka nesneye bırakması için "dynamic allocation" önemlidir. Unreal Engine'de bu işlemi kolaylaştıran garbage collection sistemi bulunmaktadır. Motorun otomatik olarak referans sayısını tutması ve boşaldığında, başka nesneye yer vermesi için "UCLASS()" makrosu kullanılır. Bunun sayesinde referans sayısını otomatik olarak tutulur ve her bir cpu döngüsünde gerekli işlemler gerçekleştirilir.
+
+Motorun bu işlemleri kendisinin yapması önemlidir çünkü oluşturulan nesnelerin geçici (heap) veya kalıcı (stack) bellekte karar vermemiz daha sonrasında ise her oluşturulan nesnede işaretleme yükümlüğünden (new-delete) kurtarır. Aynı zamanda referans sayısını dinamik olarak tuttuğu ve güncellediği için bellek optimizasyonu sağlar.
 
 ![Image](./Pics/Unreal-Engine-C--._image1.png)
 
@@ -4350,16 +4489,38 @@ GetGrabber->Release();
 
 # C++ to Blueprint Node 
 
-Blueprint pure: No node function in bp
+## BlueprintCallable
+- The method can be executed in Blueprints.
+- The node has a execution pin.
+
+## Blueprint pure
+
+- The method can be used in Blueprints.
+- The node has no execution pin.
+- The function promises to not modify anything.
+- not enforced
+- Cannot be used on interfaces.
+- Remedy: Callable specifier + const function
+
 ```
 UFUNCTION(BlueprintCallable, BlueprintPure)
 FVector GetMaxGrabLocation() const;
 ```
 ![BlueprintPure](./Pics/Unreal-Engine-C--.image1.png)
 
-Blueprint pure: No node function in bp
+
+## BlueprintImplementableEvent
+- The method can only be implemented in Blueprints.
+- A default C++ implementation is generated which just returns default values.
+
 ```
 UFUNCTION(BlueprintImplementableEvent)
 void NotifyQuestActor(AActor* Actor);
 ```
 ![BlueprintImplementableEvent](./Pics/Unreal-Engine-C--.image2.png)
+
+## BlueprintNativeEvent
+- The method can be implemented in Blueprints and C++.
+- The method needs to have a C++ implementation.
+- The C++ method name is extended by _implementation.
+
