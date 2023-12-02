@@ -1,6 +1,7 @@
 # Unreal Engine Scripts and Notes
 
 EN: Please contact me to make changes or to share elsewhere. If you have questions or improvements, I'd be happy to hear. 
+
 TR: Lütfen değişiklik yapmak için veya başka yerlerde paylaşmak için iletişime geçiniz. Sorularınız veya geliştirmeleriniz varsa duymaktan memnun olurum.
 
 **Github:** [Github](https://github.com/creosB)
@@ -22,7 +23,7 @@ TR: Lütfen değişiklik yapmak için veya başka yerlerde paylaşmak için ilet
    10) [Unreal Header Tool (UHT)](#unreal-header-tool-uht)
    11) [UPROPERTY](#uproperty)
    12) [UFUNCTION](#ufunction)
-1) [#Save and Load Game C++](#save-and-load-game-c)
+1) [Save and Load Game C++](#save-and-load-game-c)
 2) [Using DataTable C++](#using-datatable-c)
 3) [API/Json Usage](#apijson-usage)
 4) [Optimizing](#optimizing)
