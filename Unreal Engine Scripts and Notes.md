@@ -74,7 +74,7 @@ TR: Lütfen değişiklik yapmak için veya başka yerlerde paylaşmak için ilet
 45) [EOS Crossplay Multiplayer C++](#eos-crossplay-multiplayer-c)
    - [EOS Kurulumu ve Ayarları](#eos-kurulumu-ve-ayarları)
    - [EOS Kullanımı](#eos-kullanımı)
-46) [#OOP on Unreal Engine C++](#oop-on-unreal-engine-c)
+46) [OOP on Unreal Engine C++](#oop-on-unreal-engine-c)
    - [Abstract - Interface](#abstract---interface)
    - [Event Handling](#event-handling)
       - [Single Delegate](#single-delegate)
